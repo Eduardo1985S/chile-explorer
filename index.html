@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubra o Chile: Cordilheira dos Andes com neve, vinícolas renomadas, passeios no Atacama e Patagônia. Experiência Clean Parallax 100% Flexbox e CSS3.">
+  <title>CHILE EXPLORER | Neve, Vinhedos & Aventuras nos Andes</title>
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Animate.css CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+  <!-- Custom CSS Clean Parallax (100% Flexbox - Sem Grid) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!-- Barra de Progresso de Rolagem (100% CSS) -->
+  <div class="scroll-progress-bar"></div>
+
+  <!-- Header / Navbar Clean -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#top" class="logo animate__animated animate__fadeIn">
+        <i class="fa-solid fa-mountain-sun"></i>
+        <span>CHILE<strong>.EXPLORER</strong></span>
+      </a>
+
+      <!-- Menu Toggle 100% CSS -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="menu-toggle" aria-label="Menu">
+        <i class="fa-solid fa-bars icon-open"></i>
+        <i class="fa-solid fa-xmark icon-close"></i>
+      </label>
+
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link">Início</a></li>
+          <li><a href="#about" class="nav-link">O Chile</a></li>
+          <li><a href="#tours" class="nav-link">Passeios</a></li>
+          <li><a href="#wine" class="nav-link">Rota do Vinho</a></li>
+          <li><a href="#curiosities" class="nav-link">Curiosidades</a></li>
+          <li><a href="#contact" class="nav-link">Planejar Viagem</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#tours" class="btn btn-primary animate__animated animate__fadeIn">
+          Roteiros <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         JANELA PARALLAX 1: HERO (CORDILHEIRA DOS ANDES NEVADA - IMAGEM FIXA)
+         ========================================================================= -->
+    <section id="hero" class="parallax-window bg-andes">
+      <div class="parallax-overlay"></div>
+      <div class="container parallax-content animate__animated animate__fadeIn">
+        <span class="clean-badge animate__animated animate__fadeInDown">
+          <i class="fa-solid fa-snowflake"></i> Descubra a Magia dos Andes
+        </span>
+        <h1 class="hero-title animate__animated animate__fadeInUp">
+          Neve, Vinhedos & a Imensidão <span class="gradient-text">do Chile</span>
+        </h1>
+        <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+          Da imponência da Cordilheira dos Andes e estações de esqui aos premiados vinhos Carménère e os desertos mais fascinantes do planeta.
+        </p>
+        <div class="hero-actions animate__animated animate__fadeInUp animate__delay-1s">
+          <a href="#tours" class="btn btn-solid">Explorar Passeios</a>
+          <a href="#wine" class="btn btn-glass">Rota dos Vinhos</a>
+        </div>
+      </div>
+      
+      <a href="#about" class="scroll-arrow animate__animated animate__bounce animate__infinite" aria-label="Rolar para baixo">
+        <i class="fa-solid fa-arrow-down-long"></i>
+      </a>
+    </section>
+
+    <!-- =========================================================================
+         BLOCO DE CONTEÚDO 1: O CHILE (DESLIZA SOBRE A IMAGEM FIXA)
+         ========================================================================= -->
+    <section id="about" class="solid-content-section">
+      <div class="container">
+        <div class="clean-section-header">
+          <span class="clean-tag">Natureza e Contrastes</span>
+          <h2>Um País Moldado por Gigantes Naturais</h2>
+          <p>Entre o Oceano Pacífico e a cordilheira mais longa do mundo, o Chile abriga uma diversidade geográfica sem igual.</p>
+        </div>
+
+        <div class="flex-row">
+          <div class="clean-card animate__animated animate__fadeIn">
+            <div class="clean-icon">
+              <i class="fa-solid fa-person-skiing"></i>
+            </div>
+            <h3>Temporada de Neve</h3>
+            <p>Pistas de esqui renomadas mundialmente em Valle Nevado, Farellones e Portillo a poucos minutos de Santiago.</p>
+          </div>
+
+          <div class="clean-card featured animate__animated animate__fadeIn">
+            <div class="clean-icon">
+              <i class="fa-solid fa-wine-glass"></i>
+            </div>
+            <h3>Terroirs & Vinhedos</h3>
+            <p>Vales ensolarados protegidos pelos Andes que produzem rótulos premiados internacionalmente de Carménère e Cabernet.</p>
+          </div>
+
+          <div class="clean-card animate__animated animate__fadeIn">
+            <div class="clean-icon">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <h3>Extremos Marcantes</h3>
+            <p>Do deserto mais árido do mundo (Atacama) até os blocos de gelo milenar e fiordes da Patagônia Chilena.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         JANELA PARALLAX 2: ROTA DO VINHO (VINHEDOS CHILENOS - IMAGEM FIXA)
+         ========================================================================= -->
+    <section id="wine" class="parallax-window bg-wine">
+      <div class="parallax-overlay dark"></div>
+      <div class="container parallax-content text-center">
+        <i class="fa-solid fa-wine-bottle quote-mark animate__animated animate__fadeIn"></i>
+        <blockquote class="clean-quote animate__animated animate__fadeInUp">
+          "O vinho chileno guarda o frescor dos ventos andinos e o calor do sol do Pacífico em cada taça."
+        </blockquote>
+        <span class="quote-author">— Vales de Maipo, Casablanca & Colchagua</span>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         BLOCO DE CONTEÚDO 2: PASSEIOS IMPERDÍVEIS (DESLIZA SOBRE A JANELA)
+         ========================================================================= -->
+    <section id="tours" class="solid-content-section">
+      <div class="container">
+        <div class="clean-section-header">
+          <span class="clean-tag">Experiências Chilenas</span>
+          <h2>Passeios Mais Desejados no Chile</h2>
+          <p>Roteiros inesquecíveis para curtir a neve, a gastronomia e paisagens de tirar o fôlego.</p>
+        </div>
+
+        <div class="flex-row">
+          <!-- Passeio 1 -->
+          <article class="clean-dest-card">
+            <div class="dest-thumb">
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1000&q=85" alt="Valle Nevado e Neve nos Andes" loading="lazy">
+              <span class="dest-badge">Cordilheira dos Andes</span>
+            </div>
+            <div class="dest-info">
+              <h3>Valle Nevado & Farellones</h3>
+              <p>Viva a emoção da neve nos Andes: aulas de esqui, snowboard, tubing e vista panorâmica incrível.</p>
+              <div class="dest-bottom">
+                <span class="dest-price">A partir de R$ 380 / dia</span>
+                <a href="#contact" class="dest-link" aria-label="Saber mais sobre Valle Nevado"><i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Passeio 2 -->
+          <article class="clean-dest-card">
+            <div class="dest-thumb">
+              <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1000&q=85" alt="Vinícolas Chilenas" loading="lazy">
+              <span class="dest-badge">Vale do Maipo</span>
+            </div>
+            <div class="dest-info">
+              <h3>Tour & Degustação em Vinícolas</h3>
+              <p>Conheça adegas históricas como Concha y Toro, Santa Rita e Undurraga com harmonização e tábua de queijos.</p>
+              <div class="dest-bottom">
+                <span class="dest-price">A partir de R$ 290 / pessoa</span>
+                <a href="#contact" class="dest-link" aria-label="Saber mais sobre Vinícolas"><i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Passeio 3 -->
+          <article class="clean-dest-card">
+            <div class="dest-thumb">
+              <img src="https://images.unsplash.com/photo-1518182170546-07661fd94144?auto=format&fit=crop&w=1000&q=85" alt="Deserto do Atacama" loading="lazy">
+              <span class="dest-badge">San Pedro de Atacama</span>
+            </div>
+            <div class="dest-info">
+              <h3>Vale da Lua & Geysers del Tatio</h3>
+              <p>Cenários lunares, lagoas de sal onde você não afunda e o pôr do sol mais espetacular do deserto.</p>
+              <div class="dest-bottom">
+                <span class="dest-price">A partir de R$ 620 / tour</span>
+                <a href="#contact" class="dest-link" aria-label="Saber mais sobre Atacama"><i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         JANELA PARALLAX 3: CURIOSIDADES & MÉTRICAS (PATAGÔNIA / GLACIARES - IMAGEM FIXA)
+         ========================================================================= -->
+    <section id="curiosities" class="parallax-window bg-patagonia">
+      <div class="parallax-overlay gradient"></div>
+      <div class="container">
+        <div class="flex-row justify-center text-center">
+          <div class="metric-box">
+            <span class="metric-num">4.300 km</span>
+            <span class="metric-label">O País Mais Longo do Mundo</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-num">2.000+</span>
+            <span class="metric-label">Vulcões Catalogados</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-num">70%</span>
+            <span class="metric-label">Observação Astronômica Global</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-num">Nº 1</span>
+            <span class="metric-label">Carménère Reencontrado</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         BLOCO DE CONTEÚDO 3: CURIOSIDADES & CONTATO (DESLIZA SOBRE A IMAGEM)
+         ========================================================================= -->
+    <section class="solid-content-section">
+      <div class="container">
+        <div class="clean-section-header">
+          <span class="clean-tag">Fatos Fascinantes</span>
+          <h2>Você Sabia Disso Sobre o Chile?</h2>
+          <p>Particularidades que fazem dessa faixa de terra um dos destinos mais encantadores da América do Sul.</p>
+        </div>
+
+        <div class="flex-row">
+          <div class="clean-card">
+            <div class="clean-icon"><i class="fa-solid fa-wine-bottle"></i></div>
+            <h3>O Renascimento do Carménère</h3>
+            <p>Considerada extinta na Europa no século XIX pela praga filoxera, a uva Carménère foi redescoberta viva no Chile em 1994 e virou o símbolo nacional.</p>
+          </div>
+
+          <div class="clean-card">
+            <div class="clean-icon"><i class="fa-solid fa-star"></i></div>
+            <h3>O Céu Mais Puro do Planeta</h3>
+            <p>O Deserto do Atacama possui mais de 300 noites limpas por ano, atraindo os maiores telescópios científicos da humanidade como o ALMA.</p>
+          </div>
+
+          <div class="clean-card">
+            <div class="clean-icon"><i class="fa-solid fa-mountain"></i></div>
+            <h3>A Piscina Gigante & Picos</h3>
+            <p>Além das maiores montanhas da América, o Chile em San Alfonso del Mar já teve a maior piscina cristalina artificial do mundo registrada no Guinness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         BLOCO DE CONTEÚDO 4: FORMULÁRIO DE CONTATO / COTAÇÃO
+         ========================================================================= -->
+    <section id="contact" class="solid-content-section">
+      <div class="container">
+        <div class="clean-contact-wrapper">
+          <div class="clean-section-header">
+            <span class="clean-tag">Monte Seu Roteiro</span>
+            <h2>Planeje Sua Viagem ao Chile</h2>
+            <p>Diga-nos o período do ano e os passeios desejados para montarmos uma proposta sob medida.</p>
+          </div>
+
+          <form action="#" method="POST" class="clean-form" onsubmit="alert('Obrigado! Sua solicitação de viagem ao Chile foi enviada com sucesso. Entraremos em contato!'); return false;">
+            <div class="flex-row gap-form">
+              <div class="input-wrap">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" required placeholder="Ex: Gabriel Silva">
+              </div>
+              <div class="input-wrap">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required placeholder="seuemail@exemplo.com">
+              </div>
+            </div>
+
+            <div class="flex-row gap-form">
+              <div class="input-wrap">
+                <label for="dest">Interesse Principal</label>
+                <select id="dest" required>
+                  <option value="" disabled selected>Selecione uma experiência</option>
+                  <option value="neve">Temporada de Neve (Valle Nevado / Farellones)</option>
+                  <option value="vinho">Rota dos Vinhos & Gastronomia</option>
+                  <option value="atacama">Aventura no Deserto do Atacama</option>
+                  <option value="patagonia">Expedição Torres del Paine / Patagônia</option>
+                  <option value="combo">Combo Completo (Neve + Vinhos + Santiago)</option>
+                </select>
+              </div>
+              <div class="input-wrap">
+                <label for="season">Época Prevista</label>
+                <select id="season" required>
+                  <option value="" disabled selected>Mês ou Temporada</option>
+                  <option value="inverno">Inverno (Junho a Setembro - Neve)</option>
+                  <option value="primavera">Primavera (Outubro a Dezembro)</option>
+                  <option value="verao">Verão (Janeiro a Março - Atacama/Vinhos)</option>
+                  <option value="outono">Outono (Abril a Maio - Vindima dos Vinhos)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="input-wrap">
+              <label for="msg">Mensagem ou Preferências</label>
+              <textarea id="msg" rows="3" placeholder="Quantas pessoas viajarão? Deseja aulas de esqui, passeios privados ou degustação premium?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-solid btn-full">
+              Solicitar Roteiro Personalizado <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER CLEAN -->
+  <footer class="clean-footer">
+    <div class="container flex-row footer-flex">
+      <div class="footer-col-main">
+        <a href="#top" class="logo">
+          <i class="fa-solid fa-mountain-sun"></i>
+          <span>CHILE<strong>.EXPLORER</strong></span>
+        </a>
+        <p>Especialistas em experiências autênticas no Chile: neve, cordilheira, enoturismo e natureza exuberante em 100% Flexbox e CSS3 puro.</p>
+      </div>
+
+      <div class="footer-col-nav">
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#about">O Chile</a></li>
+          <li><a href="#tours">Passeios de Neve</a></li>
+          <li><a href="#wine">Rota dos Vinhos</a></li>
+          <li><a href="#curiosities">Curiosidades</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-social">
+        <h4>Acompanhe</h4>
+        <div class="flex-row gap-social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-credits">
+      <div class="container">
+        <p>&copy; 2026 CHILE EXPLORER. Clean Parallax de Imagens Fixas. 100% HTML5 & CSS3 Flexbox Puro.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão Voltar ao Topo (100% CSS) -->
+  <a href="#top" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+
+</body>
+</html>
