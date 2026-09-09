@@ -1,40 +1,47 @@
 /* ==========================================================================
-   CHILE EXPLORER - CLEAN PARALLAX (100% FLEXBOX & CSS3 PURO - ZERO JS)
+   CHILE EXPLORER - CLEAN & CLARO (LIGHT THEME)
+   100% FLEXBOX & CSS3 PURO - ZERO JS - PARALLAX DE IMAGEM FIXA
    ========================================================================== */
 
 :root {
-  /* Paleta Clean Chile: Neve Andina + Vinho Carménère */
-  --bg-deep: #070a13;
-  --bg-solid: #0c1220;
-  --bg-card: #131b2e;
-  --bg-card-hover: #19233c;
+  /* Paleta Clean & Clara (Light Mode) */
+  --bg-page: #f8fafc;
+  --bg-solid: #ffffff;
+  --bg-solid-alt: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #ffffff;
   
-  --text-pure: #ffffff;
-  --text-body: #e2e8f0;
-  --text-muted: #94a3b8;
+  --text-main: #0f172a;     /* Slate Escuro para leitura perfeita */
+  --text-body: #334155;     /* Texto de parágrafo */
+  --text-muted: #64748b;    /* Legendas e detalhes */
+  --text-white: #ffffff;
   
-  --primary: #38bdf8;       /* Ciano Neve Andina */
-  --primary-glow: rgba(56, 189, 248, 0.35);
-  --wine: #e11d48;          /* Rubi Carménère */
-  --wine-glow: rgba(225, 29, 72, 0.3);
+  --primary: #0284c7;       /* Azul Céu dos Andes */
+  --primary-light: #e0f2fe; /* Fundo suave de destaque */
+  --primary-glow: rgba(2, 132, 199, 0.25);
   
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-active: rgba(56, 189, 248, 0.4);
+  --wine: #be123c;          /* Rubi Carménère Elegante */
+  --wine-light: #ffe4e6;
   
-  --gradient-clean: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-  --gradient-wine: linear-gradient(135deg, #e11d48 0%, #fb7185 100%);
+  --border-subtle: #e2e8f0;
+  --border-card: #edf2f7;
+  --border-active: #38bdf8;
+  
+  --gradient-clean: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  --gradient-wine: linear-gradient(135deg, #be123c 0%, #e11d48 100%);
   
   /* Tipografia */
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  /* Transições e Sombras */
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
-  --shadow-elevated: 0 20px 40px rgba(0, 0, 0, 0.55);
+  /* Transições e Sombras Clean */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-soft: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --shadow-elevated: 0 20px 35px -5px rgba(15, 23, 42, 0.12), 0 8px 10px -6px rgba(15, 23, 42, 0.06);
   --transition: 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Reset & Base */
+/* Reset Global */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -45,19 +52,19 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
   font-size: 16px;
-  background-color: var(--bg-deep);
+  background-color: var(--bg-page);
   color: var(--text-body);
   font-family: var(--font-body);
 }
 
 body {
   line-height: 1.65;
-  background-color: var(--bg-deep);
+  background-color: var(--bg-page);
   color: var(--text-body);
   overflow-x: hidden;
 }
 
-/* Barra de Progresso Scroll 100% CSS */
+/* Barra de Progresso de Rolagem 100% CSS */
 .scroll-progress-bar {
   position: fixed;
   top: 0;
@@ -85,10 +92,10 @@ body {
   padding: 0 1.5rem;
 }
 
-/* Tipografia Clean */
+/* Tipografia */
 h1, h2, h3, h4, .logo, .metric-num {
   font-family: var(--font-heading);
-  color: var(--text-pure);
+  color: var(--text-main);
   font-weight: 700;
   line-height: 1.25;
 }
@@ -116,7 +123,7 @@ h1, h2, h3, h4, .logo, .metric-num {
 }
 
 /* ==========================================================================
-   NAVBAR CLEAN
+   NAVBAR CLEAN CLARA (LIGHT THEME)
    ========================================================================== */
 .navbar {
   position: sticky;
@@ -124,10 +131,11 @@ h1, h2, h3, h4, .logo, .metric-num {
   width: 100%;
   height: 75px;
   z-index: 1000;
-  background: rgba(7, 10, 19, 0.9);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
 }
 
 .nav-container {
@@ -142,7 +150,7 @@ h1, h2, h3, h4, .logo, .metric-num {
   align-items: center;
   gap: 0.5rem;
   font-size: 1.35rem;
-  color: var(--text-pure);
+  color: var(--text-main);
   text-decoration: none;
   letter-spacing: 0.5px;
 }
@@ -163,9 +171,9 @@ h1, h2, h3, h4, .logo, .metric-num {
 
 .menu-toggle {
   display: none;
-  background: transparent;
+  background: var(--bg-solid-alt);
   border: 1px solid var(--border-subtle);
-  color: var(--text-pure);
+  color: var(--text-main);
   font-size: 1.2rem;
   padding: 0.45rem 0.7rem;
   border-radius: 8px;
@@ -220,40 +228,42 @@ h1, h2, h3, h4, .logo, .metric-num {
 }
 
 .btn-primary {
-  background: rgba(56, 189, 248, 0.12);
+  background: var(--primary-light);
   color: var(--primary);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  border: 1px solid rgba(2, 132, 199, 0.2);
 }
 
 .btn-primary:hover {
   background: var(--primary);
-  color: #050b14;
+  color: var(--text-white);
   box-shadow: 0 4px 18px var(--primary-glow);
 }
 
 .btn-solid {
   background: var(--primary);
-  color: #070d18;
+  color: var(--text-white);
   box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .btn-solid:hover {
-  background: #60a5fa;
+  background: #0369a1;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.35);
 }
 
 .btn-glass {
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--text-pure);
-  border: 1px solid var(--border-subtle);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text-main);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-glass:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: #ffffff;
+  color: var(--primary);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
 }
 
 .btn-full {
@@ -261,7 +271,7 @@ h1, h2, h3, h4, .logo, .metric-num {
 }
 
 /* ==========================================================================
-   JANELAS PARALLAX COM IMAGEM FIXA (TEMA CHILE)
+   JANELAS PARALLAX COM IMAGEM FIXA
    ========================================================================== */
 .parallax-window {
   position: relative;
@@ -270,7 +280,7 @@ h1, h2, h3, h4, .logo, .metric-num {
   align-items: center;
   justify-content: center;
   
-  /* Imagem fica 100% fixa enquanto o resto da página corre */
+  /* Imagem fica 100% fixa enquanto a página roda */
   background-attachment: fixed !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -281,39 +291,36 @@ h1, h2, h3, h4, .logo, .metric-num {
 /* Fotos 4K de Alta Resolução do Chile */
 .bg-andes {
   min-height: 92vh;
-  /* Cordilheira dos Andes com Neve */
   background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=2560&q=90');
 }
 
 .bg-wine {
   min-height: 52vh;
-  /* Vinhedos Chilenos com Montanhas ao Fundo */
   background-image: url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=2560&q=90');
 }
 
 .bg-patagonia {
   min-height: 55vh;
-  /* Patagônia Chilena & Torres del Paine */
   background-image: url('https://images.unsplash.com/photo-1518182170546-07661fd94144?auto=format&fit=crop&w=2560&q=90');
 }
 
-/* Overlays Limpos */
+/* Overlays para Contraste com Tema Claro */
 .parallax-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(7, 10, 19, 0.55);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.45) 0%, rgba(15, 23, 42, 0.65) 100%);
   z-index: 1;
 }
 
 .parallax-overlay.dark {
-  background: rgba(7, 10, 19, 0.75);
+  background: rgba(15, 23, 42, 0.68);
 }
 
 .parallax-overlay.gradient {
-  background: linear-gradient(180deg, rgba(7, 10, 19, 0.72) 0%, rgba(12, 18, 32, 0.88) 100%);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
 }
 
 .parallax-content {
@@ -327,14 +334,20 @@ h1, h2, h3, h4, .logo, .metric-num {
   padding: 3rem 1.5rem;
 }
 
-/* Hero Elements */
+/* Hero Elements (Texto Branco sobre o fundo da foto fixa) */
+.parallax-content h1,
+.parallax-content .clean-quote {
+  color: var(--text-white);
+}
+
 .clean-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(56, 189, 248, 0.1);
-  color: var(--primary);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-white);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
   padding: 0.35rem 1rem;
   border-radius: 20px;
   font-size: 0.82rem;
@@ -352,10 +365,11 @@ h1, h2, h3, h4, .logo, .metric-num {
 
 .hero-subtitle {
   font-size: 1.15rem;
-  color: #cbd5e1;
+  color: #f1f5f9;
   max-width: 660px;
   margin-bottom: 2.5rem;
   font-weight: 400;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
 .hero-actions {
@@ -369,7 +383,7 @@ h1, h2, h3, h4, .logo, .metric-num {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 1.3rem;
   text-decoration: none;
   transition: color var(--transition);
@@ -380,14 +394,14 @@ h1, h2, h3, h4, .logo, .metric-num {
 }
 
 /* ==========================================================================
-   BLOCOS SÓLIDOS DE CONTEÚDO (DESLIZAM SOBRE AS IMAGENS FIXAS)
+   BLOCOS SÓLIDOS DE CONTEÚDO (TEMA CLARO E LIMPO)
    ========================================================================== */
 .solid-content-section {
   position: relative;
   z-index: 10;
   background-color: var(--bg-solid);
   padding: 6.5rem 0;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -401,11 +415,14 @@ h1, h2, h3, h4, .logo, .metric-num {
 .clean-tag {
   display: inline-block;
   color: var(--primary);
-  font-size: 0.82rem;
+  background: var(--primary-light);
+  padding: 0.25rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 0.6rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.8rem;
 }
 
 .clean-section-header h2 {
@@ -418,13 +435,14 @@ h1, h2, h3, h4, .logo, .metric-num {
   font-size: 1rem;
 }
 
-/* Cards de Destaque */
+/* Cards de Destaque no Tema Claro */
 .clean-card {
   flex: 1 1 300px;
   background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-card);
   border-radius: 16px;
   padding: 2.2rem 1.8rem;
+  box-shadow: var(--shadow-sm);
   transition: all var(--transition);
   display: flex;
   flex-direction: column;
@@ -432,26 +450,25 @@ h1, h2, h3, h4, .logo, .metric-num {
 
 .clean-card:hover {
   transform: translateY(-6px);
-  background: var(--bg-card-hover);
   border-color: var(--border-active);
   box-shadow: var(--shadow-soft);
 }
 
 .clean-card.featured {
-  border-color: rgba(56, 189, 248, 0.3);
-  background: linear-gradient(180deg, rgba(56, 189, 248, 0.05) 0%, rgba(19, 27, 46, 0.95) 100%);
+  border-color: rgba(2, 132, 199, 0.3);
+  background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
 }
 
 .clean-icon {
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
   border-radius: 12px;
-  background: rgba(56, 189, 248, 0.1);
+  background: var(--primary-light);
   color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   margin-bottom: 1.4rem;
 }
 
@@ -470,8 +487,7 @@ h1, h2, h3, h4, .logo, .metric-num {
    ========================================================================== */
 .quote-mark {
   font-size: 2.5rem;
-  color: var(--wine);
-  opacity: 0.85;
+  color: #fda4af;
   margin-bottom: 1.2rem;
 }
 
@@ -479,26 +495,26 @@ h1, h2, h3, h4, .logo, .metric-num {
   font-family: var(--font-heading);
   font-size: 1.85rem;
   font-weight: 500;
-  color: var(--text-pure);
   line-height: 1.4;
   margin-bottom: 1rem;
 }
 
 .quote-author {
-  color: var(--text-muted);
+  color: #cbd5e1;
   font-size: 0.95rem;
   letter-spacing: 1px;
 }
 
 /* ==========================================================================
-   PASSEIOS CHILENOS (FLEXBOX)
+   PASSEIOS CHILENOS (CARDS NO TEMA CLARO)
    ========================================================================== */
 .clean-dest-card {
   flex: 1 1 320px;
   background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-card);
   border-radius: 16px;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   transition: all var(--transition);
@@ -531,14 +547,14 @@ h1, h2, h3, h4, .logo, .metric-num {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background: rgba(7, 10, 19, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(6px);
   color: var(--primary);
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   padding: 0.3rem 0.75rem;
   border-radius: 6px;
-  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
 }
 
 .dest-info {
@@ -564,13 +580,13 @@ h1, h2, h3, h4, .logo, .metric-num {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid var(--border-card);
   padding-top: 1rem;
 }
 
 .dest-price {
-  font-weight: 600;
-  color: var(--text-pure);
+  font-weight: 700;
+  color: var(--text-main);
   font-size: 0.95rem;
 }
 
@@ -578,7 +594,7 @@ h1, h2, h3, h4, .logo, .metric-num {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(56, 189, 248, 0.1);
+  background: var(--primary-light);
   color: var(--primary);
   display: flex;
   align-items: center;
@@ -590,12 +606,12 @@ h1, h2, h3, h4, .logo, .metric-num {
 
 .clean-dest-card:hover .dest-link {
   background: var(--primary);
-  color: #070d18;
+  color: var(--text-white);
   transform: rotate(45deg);
 }
 
 /* ==========================================================================
-   MÉTRICAS & CURIOSIDADES (FLEXBOX)
+   MÉTRICAS PARALLAX
    ========================================================================== */
 .metric-box {
   flex: 1 1 200px;
@@ -607,18 +623,18 @@ h1, h2, h3, h4, .logo, .metric-num {
 
 .metric-num {
   font-size: 2.8rem;
-  color: var(--primary);
+  color: #38bdf8;
   margin-bottom: 0.3rem;
 }
 
 .metric-label {
-  color: var(--text-pure);
+  color: var(--text-white);
   font-size: 0.95rem;
   font-weight: 500;
 }
 
 /* ==========================================================================
-   FORMULÁRIO DE CONTATO (CHILE ROTEIROS)
+   FORMULÁRIO DE CONTATO (TEMA CLARO)
    ========================================================================== */
 .clean-contact-wrapper {
   max-width: 680px;
@@ -650,39 +666,41 @@ h1, h2, h3, h4, .logo, .metric-num {
 .input-wrap label {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--text-body);
+  color: var(--text-main);
 }
 
 .input-wrap input,
 .input-wrap select,
 .input-wrap textarea {
   width: 100%;
-  background: #080c16;
+  background: #ffffff;
   border: 1px solid var(--border-subtle);
   border-radius: 8px;
   padding: 0.8rem 1rem;
-  color: var(--text-pure);
+  color: var(--text-main);
   font-family: var(--font-body);
   font-size: 0.92rem;
   outline: none;
-  transition: border-color var(--transition);
+  transition: all var(--transition);
 }
 
 .input-wrap input:focus,
 .input-wrap select:focus,
 .input-wrap textarea:focus {
   border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
 }
 
 .input-wrap select option {
-  background-color: var(--bg-solid);
+  background-color: #ffffff;
+  color: var(--text-main);
 }
 
 /* ==========================================================================
-   FOOTER CLEAN
+   FOOTER CLEAN & CLARO
    ========================================================================== */
 .clean-footer {
-  background-color: var(--bg-deep);
+  background-color: var(--bg-solid-alt);
   border-top: 1px solid var(--border-subtle);
   padding: 4rem 0 0 0;
   position: relative;
@@ -718,7 +736,7 @@ h1, h2, h3, h4, .logo, .metric-num {
 .footer-col-social h4 {
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: var(--text-pure);
+  color: var(--text-main);
 }
 
 .footer-col-nav ul {
@@ -747,7 +765,7 @@ h1, h2, h3, h4, .logo, .metric-num {
   width: 38px;
   height: 38px;
   border-radius: 8px;
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border-subtle);
   color: var(--text-body);
   display: flex;
@@ -755,15 +773,17 @@ h1, h2, h3, h4, .logo, .metric-num {
   justify-content: center;
   text-decoration: none;
   transition: all var(--transition);
+  box-shadow: var(--shadow-sm);
 }
 
 .gap-social a:hover {
   background: var(--primary);
-  color: #050b14;
+  color: var(--text-white);
+  border-color: var(--primary);
 }
 
 .footer-credits {
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-top: 1px solid var(--border-subtle);
   padding: 1.4rem 0;
   text-align: center;
   color: var(--text-muted);
@@ -779,7 +799,7 @@ h1, h2, h3, h4, .logo, .metric-num {
   height: 44px;
   border-radius: 8px;
   background: var(--primary);
-  color: #070d18;
+  color: var(--text-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -787,12 +807,12 @@ h1, h2, h3, h4, .logo, .metric-num {
   font-size: 1rem;
   z-index: 998;
   transition: all var(--transition);
-  box-shadow: 0 4px 15px var(--primary-glow);
+  box-shadow: var(--shadow-soft);
 }
 
 .back-to-top:hover {
   transform: translateY(-3px);
-  background: #60a5fa;
+  background: #0369a1;
 }
 
 /* ==========================================================================
@@ -814,7 +834,7 @@ h1, h2, h3, h4, .logo, .metric-num {
     top: 75px;
     left: 0;
     width: 100%;
-    background: rgba(7, 10, 19, 0.98);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-subtle);
     padding: 2rem 1.5rem;
@@ -822,6 +842,7 @@ h1, h2, h3, h4, .logo, .metric-num {
     opacity: 0;
     visibility: hidden;
     transition: all var(--transition);
+    box-shadow: var(--shadow-soft);
   }
 
   .nav-toggle:checked ~ .nav-menu {
